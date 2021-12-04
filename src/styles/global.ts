@@ -10,11 +10,15 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 60%;
+
+    @media (min-width: 700px) {
+      font-size: 62.5%;
+    }
   }
 
   body {
     font-family: 'Roboto', sans-serif;
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.text};
   }
 
   body, input, button, textarea {
@@ -32,9 +36,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: bold;
   }
 
-  @media (min-width: 700px) {
-    html {
-      font-size: 62.5%;
-    }
+  #__next {
+    background-color: ${({ theme }) => theme.colors.background};
   }
 `;

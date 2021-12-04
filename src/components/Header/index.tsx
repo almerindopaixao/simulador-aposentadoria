@@ -1,3 +1,5 @@
+import { Container } from './styled';
+
 export default function Header() {
-  return <header></header>;
+  return <Container>Header</Container>;
 }

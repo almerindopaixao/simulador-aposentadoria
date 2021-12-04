@@ -43,7 +43,6 @@ export default class MyDocument extends Document {
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="robots" content="index, follow" />
           <meta name="revisit-after" content="1 day" />
-          <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <body>
