@@ -1,5 +1,10 @@
 import { Container } from './styled';
-
 export default function Header() {
-  return <Container>Header</Container>;
+  return (
+    <Container>
+      <div>
+        <h1>Simulador de Aposentadoria</h1>
+      </div>
+    </Container>
+  );
 }

@@ -1,5 +1,10 @@
 import { Container } from './styled';
 
 export default function Footer() {
-  return <Container>Footer</Container>;
+  const currentYear = new Date().getFullYear();
+  return (
+    <Container>
+      <p>Desenvolvido por Almerindo Paixão &copy; {currentYear}</p>
+    </Container>
+  );
 }
