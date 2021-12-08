@@ -1,0 +1,4 @@
+{
+  "*.tsx": ["yarn lint"],
+  "*.ts": ["yarn lint"]
+}
