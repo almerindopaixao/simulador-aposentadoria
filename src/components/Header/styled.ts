@@ -15,5 +15,9 @@ export const Container = styled.header`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 600px) {
+      padding: ${({ theme }) => theme.spacings.medium};
+    }
   }
 `;
