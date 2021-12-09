@@ -326,6 +326,9 @@ export default function HomePage() {
         title={SiteConfig.SITE_NAME}
         author="Almerindo Paixão"
         type="website"
+        siteName={SiteConfig.SITE_NAME}
+        url={SiteConfig.SITE_URL}
+        keywords="Simulador, Aposentadoria, Finanças, Economizar, Dinheiro"
       />
       <Header />
       <MainContainer>

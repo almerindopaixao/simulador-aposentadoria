@@ -6,5 +6,6 @@ import Field from './Field';
 import Input from './Input';
 import Box from './Box';
 import Form from './Form';
+import Icons from './Icons';
 
-export { Footer, Header, MainContainer, SEO, Field, Input, Box, Form };
+export { Footer, Header, MainContainer, SEO, Field, Input, Box, Form, Icons };

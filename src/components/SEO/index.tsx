@@ -4,9 +4,9 @@ export type SEOProps = {
   title: string;
   description?: string;
   keywords?: string;
-  url?: string;
+  url: string;
   type: 'blog' | 'website' | 'article' | 'profile';
-  siteName?: string;
+  siteName: string;
   author: string;
   image_large?: string;
   image_small?: string;
@@ -14,15 +14,24 @@ export type SEOProps = {
   children?: React.ReactNode;
 };
 
-export default function SEO({ title, author, type, children }: SEOProps) {
+export default function SEO({
+  title,
+  author,
+  type,
+  siteName,
+  keywords,
+  url,
+  children,
+}: SEOProps) {
   return (
     <Head>
       <title>{title}</title>
       <meta name="author" content={author} />
       <meta name="creator" content={author} />
-      {/*<meta name="application-name" content="Simulador Aposentadoria" />
+      <meta name="application-name" content={title} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {/*
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
 
       <meta property="og:description" content={description} />
 
@@ -37,13 +46,13 @@ export default function SEO({ title, author, type, children }: SEOProps) {
       <meta property="og:image" content={image_small} />
       <meta property="og:image:alt" content={description} />
 
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content={siteName} />
-     */}
+    */}
       <meta property="og:title" content={title} />
       <meta property="og:locale" content="pt_BR" />
 
       <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:url" content={url} />
       {children}
     </Head>
   );

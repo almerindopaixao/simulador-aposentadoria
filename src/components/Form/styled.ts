@@ -14,5 +14,9 @@ export const Form = styled.form`
     font-weight: bold;
 
     margin-bottom: 40px;
+
+    @media (max-width: 500px) {
+      font-size: 2.8rem;
+    }
   }
 `;
