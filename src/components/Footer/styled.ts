@@ -14,6 +14,7 @@ export const Container = styled.footer`
   p {
     text-transform: uppercase;
     text-align: center;
+    padding: ${({ theme }) => theme.spacings.large};
 
     @media (max-width: 600px) {
       font-size: 1.3rem;

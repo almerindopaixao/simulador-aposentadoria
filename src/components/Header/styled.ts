@@ -5,16 +5,37 @@ export const Container = styled.header`
   min-height: 30rem;
   color: white;
 
-  div {
+  .title-container {
+  }
+
+  .logo-container {
+    margin-right: 16px;
+  }
+
+  svg {
+    width: 72px;
+    height: 72px;
+
+    @media (max-width: 760px) {
+      width: 64px;
+      height: 64px;
+    }
+
+    @media (max-width: 500px) {
+      width: 58px;
+      height: 58px;
+    }
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+
     margin: 0 auto;
     padding: ${({ theme }) => theme.spacings.large};
     max-width: 116rem;
 
     height: calc(30rem - 12rem);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     @media (max-width: 600px) {
       padding: ${({ theme }) => theme.spacings.medium};
@@ -33,7 +54,7 @@ export const Container = styled.header`
     }
 
     @media (max-width: 500px) {
-      font-size: 4rem;
+      font-size: 3.6rem;
     }
   }
 `;
