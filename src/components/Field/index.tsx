@@ -31,7 +31,8 @@ export default function Field({
         years,
       };
 
-      const value = mask ? masks[mask](e) : e.target.value;
+      const param = e.target.value;
+      const value = mask ? masks[mask](param) : e.target.value;
 
       setValue(value);
     },

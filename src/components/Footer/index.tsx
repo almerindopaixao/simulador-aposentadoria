@@ -4,7 +4,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <Container>
-      <p>Desenvolvido por Almerindo Paixão &copy; {currentYear}</p>
+      <p>
+        {currentYear} &copy;{' '}
+        <a
+          href="https://www.linkedin.com/in/almerindopaixao/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          almerindopaixao
+        </a>{' '}
+        - Todos os direitos reservados{' '}
+      </p>
     </Container>
   );
 }

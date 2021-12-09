@@ -10,4 +10,19 @@ export const Container = styled.footer`
     justify-content: center;
     align-items: center;
   `}
+
+  p {
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: 600px) {
+      font-size: 1.3rem;
+      line-height: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: ${({ theme }) => theme.colors.text};
+    }
+  }
 `;

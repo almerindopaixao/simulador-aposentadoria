@@ -34,6 +34,10 @@ export const Input = styled.input<InputProps>`
     font-weight: bold;
     font-size: 2rem;
     background: #f5f8fa;
+
+    @media (max-width: 500px) {
+      font-size: 1.8rem;
+    }
   }
 `;
 
@@ -47,5 +51,9 @@ export const Container = styled.div`
 
   &:focus-within {
     border-color: ${({ theme }) => theme.colors.primaryDark};
+  }
+
+  @media (max-width: 760px) {
+    margin-top: 15px;
   }
 `;

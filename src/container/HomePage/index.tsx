@@ -1,4 +1,4 @@
-import { useState, Dispatch, SetStateAction } from 'react';
+import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import {
   Footer,
   Header,
@@ -11,6 +11,9 @@ import {
 import { Icons, Masks } from '../../domain';
 import { GridLayout } from '../../styles/layout';
 import { SiteConfig } from '../../config/sinte-config';
+
+import core from '../../services/Core';
+import { unmakedCurrency, unmakedPercent } from '../../utils/masks';
 
 export type FieldsData<T> = {
   legend: string;
@@ -229,6 +232,93 @@ export default function HomePage() {
       },
     ],
   };
+
+  useEffect(() => {
+    const newGanhoMensal = unmakedCurrency(ganhoMensal);
+    const newInvestimentoMensal = unmakedPercent(investimentoMensal) / 100;
+    const newRentabilidade = unmakedPercent(rentabilidade) / 100;
+    const newTemInvestido = unmakedCurrency(temInvestido);
+    const newAnosAposentadoria = Number(anosAposentadoria);
+
+    const numeroAnos = core.calculaAnosPrimeiroMilhao(
+      newGanhoMensal,
+      newInvestimentoMensal,
+      newRentabilidade,
+      newTemInvestido,
+    );
+
+    const valorFinal = core.calculaSeAposentarCom(
+      newGanhoMensal,
+      newRentabilidade,
+      newAnosAposentadoria,
+      newInvestimentoMensal,
+      newTemInvestido,
+    );
+
+    setPrimeiroMilhao(numeroAnos);
+    setAposentaCom(valorFinal);
+  }, [
+    ganhoMensal,
+    investimentoMensal,
+    rentabilidade,
+    temInvestido,
+    anosAposentadoria,
+  ]);
+
+  useEffect(() => {
+    const newRentabilidade = unmakedPercent(rentabilidade) / 100;
+    const newAnosViverAposentados = Number(anosViverAposentado);
+    const newAposentarCom = unmakedCurrency(aposentaCom);
+    const newGastosVelhota = unmakedCurrency(gastosVelhota);
+
+    const maximoTorrar = core.calculaPoderaTorrar(
+      newRentabilidade,
+      newAnosViverAposentados,
+      newAposentarCom,
+    );
+
+    const anosRicos = core.calcularAnosViverAposentado(
+      newRentabilidade,
+      newGastosVelhota,
+      newAposentarCom,
+    );
+
+    setMaximoTorrar(maximoTorrar);
+    setQuantosAnosRico(anosRicos);
+  }, [rentabilidade, anosViverAposentado, aposentaCom, gastosVelhota]);
+
+  useEffect(() => {
+    const newQuantoQuerAposentar = unmakedCurrency(quantoQuerAposentar);
+    const newQuantoTempoAposentadoria = Number(quantoTempoAposentadoria);
+    const newRentabilidadeAnual = unmakedPercent(rentabilidadeAnual) / 100;
+    const newQuantoJaInvestido = unmakedCurrency(quantoJaInvestido) * -1;
+    const newQuantosAnosAposentado = Number(quantosAnosAposentado);
+    const newQuantoGastarAposentado = unmakedCurrency(quantoGastarAposentado);
+
+    const valorParaInvestir = core.calculaQuantoDeveraInvestir(
+      newQuantoQuerAposentar,
+      newQuantoTempoAposentadoria,
+      newRentabilidadeAnual,
+      newQuantoJaInvestido,
+    );
+
+    const valorHeranca = core.calculaQuantoHerancaDeixar(
+      newRentabilidadeAnual,
+      newQuantosAnosAposentado,
+      newQuantoQuerAposentar,
+      newQuantoGastarAposentado,
+    );
+
+    setQuantoDeveraInvestir(valorParaInvestir);
+    setQuantoHerancaDeixar(valorHeranca);
+  }, [
+    quantoQuerAposentar,
+    quantoTempoAposentadoria,
+    rentabilidadeAnual,
+    quantoJaInvestido,
+    quantosAnosAposentado,
+    quantoGastarAposentado,
+  ]);
 
   return (
     <>
