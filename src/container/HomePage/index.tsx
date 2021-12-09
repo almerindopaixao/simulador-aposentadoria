@@ -322,7 +322,11 @@ export default function HomePage() {
 
   return (
     <>
-      <SEO title={SiteConfig.SITE_NAME} />
+      <SEO
+        title={SiteConfig.SITE_NAME}
+        author="Almerindo Paixão"
+        type="website"
+      />
       <Header />
       <MainContainer>
         <Box marginTop="-12rem">
