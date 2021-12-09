@@ -7,7 +7,7 @@ export const Container = styled.main`
     max-width: 116rem;
 
     @media (max-width: 600px) {
-      padding: ${theme.spacings.small};
+      padding: ${theme.spacings.medium};
     }
   `}
 `;

@@ -20,4 +20,20 @@ export const Container = styled.header`
       padding: ${({ theme }) => theme.spacings.medium};
     }
   }
+
+  h1 {
+    font-size: 5rem;
+
+    @media (max-width: 1000px) {
+      font-size: 4.4rem;
+    }
+
+    @media (max-width: 760px) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 4rem;
+    }
+  }
 `;
