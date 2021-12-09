@@ -1,7 +1,10 @@
-import { Footer, Header, MainContainer, SEO } from '../../components';
+import { Footer, Header, MainContainer, SEO, Box } from '../../components';
 import { SiteConfig } from '../../config/sinte-config';
+import notFound from '../../assets/not_found.svg';
 
 export default function NotFoundPage() {
+  console.log(notFound);
+
   return (
     <>
       <SEO
@@ -13,7 +16,9 @@ export default function NotFoundPage() {
       />
       <Header />
       <MainContainer>
-        <p>404</p>
+        <Box marginTop="-12rem">
+          <img src={notFound.src} width="100%" />
+        </Box>
       </MainContainer>
       <Footer />
     </>
