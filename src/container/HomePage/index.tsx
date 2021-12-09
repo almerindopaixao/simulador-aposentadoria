@@ -135,7 +135,7 @@ export default function HomePage() {
         maxLength: 20,
       },
       {
-        label: 'Insira os gastos mensais do velhota:',
+        label: 'Insira os gastos mensais da velhota:',
         name: 'gastosVelhota',
         value: gastosVelhota,
         fn: setGastosVelhota,
