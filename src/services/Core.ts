@@ -117,7 +117,7 @@ class Core {
 
     return valorFinal && valorFinal > 0
       ? currency(valorFinal.toFixed(2))
-      : 'Você não deixara herança';
+      : 'Você não deixará herança';
   }
 }
 
