@@ -1,5 +1,7 @@
-import { Footer, Header, MainContainer, SEO } from '../../components';
+import Image from 'next/image';
+import { Footer, Header, MainContainer, SEO, Box } from '../../components';
 import { SiteConfig } from '../../config/sinte-config';
+import notFound from '../../assets/not_found.svg';
 
 export default function NotFoundPage() {
   return (
@@ -13,7 +15,16 @@ export default function NotFoundPage() {
       />
       <Header />
       <MainContainer>
-        <p>404</p>
+        <Box marginTop="-12rem">
+          <Image
+            priority={true}
+            alt="Svg Not Found"
+            src={notFound.src}
+            layout="responsive"
+            width={notFound.width}
+            height={notFound.height}
+          />
+        </Box>
       </MainContainer>
       <Footer />
     </>
