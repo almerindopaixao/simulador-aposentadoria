@@ -1,8 +1,9 @@
 import Head from 'next/head';
+import { SiteConfig } from '../../config/sinte-config';
 
 export type SEOProps = {
   title: string;
-  description?: string;
+  description: string;
   keywords?: string;
   url: string;
   type: 'blog' | 'website' | 'article' | 'profile';
@@ -22,19 +23,17 @@ export default function SEO({
   keywords,
   url,
   children,
+  description,
 }: SEOProps) {
   return (
     <Head>
       <title>{title}</title>
+      <meta name="description" content={description} />
       <meta name="author" content={author} />
       <meta name="creator" content={author} />
-      <meta name="application-name" content={title} />
+      <meta name="application-name" content={SiteConfig.SITE_NAME} />
       {keywords && <meta name="keywords" content={keywords} />}
       {/*
-      <meta name="description" content={description} />
-
-      <meta property="og:description" content={description} />
-
       <meta property="og:image" content={image_default} />
       <meta property="og:image:alt" content={description} />
       <meta property="og:image:width" content="1200" />
@@ -46,8 +45,9 @@ export default function SEO({
       <meta property="og:image" content={image_small} />
       <meta property="og:image:alt" content={description} />
 
-    */}
+      */}
       <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:locale" content="pt_BR" />
 
       <meta property="og:type" content={type} />

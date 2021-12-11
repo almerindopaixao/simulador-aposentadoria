@@ -1,13 +1,19 @@
-import Image from 'next/image';
-import { Footer, Header, MainContainer, SEO, Box } from '../../components';
+import {
+  Footer,
+  Header,
+  MainContainer,
+  SEO,
+  Box,
+  Typography,
+} from '../../components';
 import { SiteConfig } from '../../config/sinte-config';
-import notFound from '../../assets/not_found.svg';
 
 export default function NotFoundPage() {
   return (
     <>
       <SEO
-        title={SiteConfig.SITE_NAME}
+        title={SiteConfig.SITE_TITLE}
+        description="teste"
         author="Almerindo Paixão"
         type="website"
         siteName={SiteConfig.SITE_NAME}
@@ -15,15 +21,8 @@ export default function NotFoundPage() {
       />
       <Header />
       <MainContainer>
-        <Box marginTop="-12rem">
-          <Image
-            priority={true}
-            alt="Svg Not Found"
-            src={notFound.src}
-            layout="responsive"
-            width={notFound.width}
-            height={notFound.height}
-          />
+        <Box marginTop="-20rem" minHeight="40rem">
+          <Typography component="h1">Error 404</Typography>
         </Box>
       </MainContainer>
       <Footer />

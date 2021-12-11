@@ -325,14 +325,19 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title={SiteConfig.SITE_NAME}
+        title={SiteConfig.SITE_TITLE}
+        description={SiteConfig.SITE_DESCRIPTION}
         author="Almerindo Paixão"
         type="website"
         siteName={SiteConfig.SITE_NAME}
         url={SiteConfig.SITE_URL}
         keywords="Simulador, Aposentadoria, Finanças, Economizar, Dinheiro"
       />
-      <Header />
+      <Header>
+        <div>
+          <p>{SiteConfig.SITE_DESCRIPTION}</p>
+        </div>
+      </Header>
       <MainContainer>
         <Box marginTop="-12rem">
           <Form legend={planejamentoPresente.legend}>

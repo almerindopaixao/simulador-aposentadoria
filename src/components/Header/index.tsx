@@ -1,7 +1,12 @@
 import { Container } from './styled';
 import { Icons } from '../.';
+import { SiteConfig } from '../../config/sinte-config';
 
-export default function Header() {
+export type HeaderProps = {
+  children?: React.ReactNode;
+};
+
+export default function Header(props: HeaderProps) {
   return (
     <Container>
       <div>
@@ -9,9 +14,10 @@ export default function Header() {
           <Icons.Logo />
         </div>
         <div className="title-container">
-          <h1>Simulador de Aposentadoria</h1>
+          <h1>{SiteConfig.SITE_NAME}</h1>
         </div>
       </div>
+      {props.children}
     </Container>
   );
 }
