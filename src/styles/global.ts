@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Roboto', sans-serif;
     color: ${({ theme }) => theme.colors.text};
+    line-height: 3.8rem;
   }
 
   body, input, button, textarea {
@@ -26,7 +27,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    text-decoration: none;
+    text-decoration: underline;
+    color: ${({ theme }) => theme.colors.textPrimary};
+    font-weight: 600;
+  }
+
+  strong {
+    color: ${({ theme }) => theme.colors.textPrimary};
   }
 
   noscript {

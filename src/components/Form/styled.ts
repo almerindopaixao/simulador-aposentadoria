@@ -10,7 +10,7 @@ export const Form = styled.form`
 
     font-size: ${({ theme }) => theme.font.sizes.superLarge};
     line-height: 34px;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.textPrimary};
     font-weight: bold;
 
     margin-bottom: 40px;
