@@ -1,4 +1,5 @@
 {
-  "*.tsx": ["yarn lint"],
-  "*.ts": ["yarn lint"]
+  "*.{ts,tsx}": [
+    "eslint 'src/**' --fix"
+  ]
 }
