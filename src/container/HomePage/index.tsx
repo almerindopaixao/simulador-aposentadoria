@@ -7,6 +7,8 @@ import {
   Field,
   Box,
   Form,
+  Content,
+  Typography,
 } from '../../components';
 import { Icons, Masks } from '../../domain';
 import { GridLayout } from '../../styles/layout';
@@ -371,6 +373,175 @@ export default function HomePage() {
             </GridLayout>
           </Form>
         </Box>
+
+        <Content>
+          <Typography component="h2">
+            Como utilizar o simulador de aposentadoria
+          </Typography>
+
+          <ol>
+            <li>
+              Preencha os campos da seção <strong>planejamento presente</strong>
+              ;
+            </li>
+
+            <li>Verifique se a formatação dos campos está correta;</li>
+
+            <li>
+              Preencha os campos da seção <strong>planejamento futuro</strong>;
+            </li>
+
+            <li>Verifique se a formatação dos campos está correta;</li>
+
+            <li>Os resultados são calculados automaticamente;</li>
+          </ol>
+
+          <Typography component="p">
+            Viu como é simples? Agora é só fazer suas simulações utilizando
+            nosso simulador de aposentadoria.
+          </Typography>
+        </Content>
+
+        <Content marginBlock="8rem">
+          <Typography component="h2">
+            O que fazer para montar uma aposentadoria
+          </Typography>
+
+          <Typography component="p">
+            A segurança financeira na aposentadoria não acontece simplesmente. É
+            preciso planejamento, comprometimento e, sim, dinheiro.
+          </Typography>
+
+          <Typography component="h3">
+            1. Comece a economizar, continue poupando e cumpra seus objetivos
+          </Typography>
+
+          <Typography component="p">
+            Se você já está economizando, seja para a aposentadoria ou outro
+            objetivo, continue! Você sabe que economizar é um hábito
+            gratificante. Se você não está economizando, é hora de iniciar.
+            Comece pequeno se for necessário e tente aumentar a quantia que você
+            economiza a cada mês. Quanto mais cedo você começar economizando,
+            mais tempo seu dinheiro terá para crescer. Elabore um plano,
+            cumpra-o e estabeleça metas. Lembre-se, nunca é muito cedo ou muito
+            tarde para começar a montar sua aposentadoria.
+          </Typography>
+
+          <Typography component="h3">2. Conheça suas necessidades</Typography>
+
+          <Typography component="p">
+            A aposentadoria é cara. Especialistas estimam que você vai precisar
+            de 70 a 90 por cento de sua renda atual para manter seu padrão de
+            vida quando você parar de trabalhar.{' '}
+            <strong>Assuma o controle de seu futuro financeiro.</strong> A chave
+            para uma aposentadoria segura é planejar com antecedência.
+          </Typography>
+
+          <Typography component="h3">
+            3. Considere os princípios básicos de investimento
+          </Typography>
+
+          <Typography component="p">
+            Inflação e os diversos tipos de investimentos desempenham papéis
+            importantes em quanto você terá economizado na aposentadoria.
+            Coloque suas economias em diferentes tipos de investimentos. Ao
+            diversificar desta forma, você é mais propenso a reduzir o risco e
+            melhorar o retorno. Sua combinação de investimentos pode mudar com o
+            tempo dependendo de uma série de fatores, como a sua idade,
+            objetivos e circunstâncias financeiras. Financeiro segurança e
+            conhecimento andam de mãos dadas.
+          </Typography>
+        </Content>
+
+        <Content marginBottom="12rem">
+          <Typography component="h2">
+            Melhores investimentos para a aposentadoria
+          </Typography>
+
+          <Typography component="p">
+            Para ter uma aposentadoria confortável, segura e divertida, você
+            precisa construir o colchão financeiro que vai custear tudo. Para
+            isso, é necessário que você conheça aplicações que ofereçam mais
+            segurança e rentabilidade para o seu tão suado dinheirinho. Então
+            confira quais são os melhores investimentos para a sua
+            aposentadoria:
+          </Typography>
+
+          <Typography component="h3">1. Tesouro IPCA</Typography>
+
+          <Typography component="p">
+            O{' '}
+            <a
+              href="https://www.tesourodireto.com.br/como-investir/aprenda-a-investir/e-books.htm"
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
+              Tesouro Direto
+            </a>{' '}
+            é um título público que faz parte de um programa do Tesouro Nacional
+            desenvolvido em parceria com a B3 (BM&FBovespa), a fim de facilitar
+            o acesso de todos os tipos de investidores aos títulos públicos
+            federais.
+          </Typography>
+
+          <Typography component="p">
+            Um investimento para aposentadoria precisa ser feito levando em
+            conta o futuro. Então, os títulos mais adequados para essa ocasião
+            são os de longo prazo, como por exemplo o{' '}
+            <a
+              href="https://www.modalmais.com.br/blog/tesouro-ipca"
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
+              Tesouro IPCA
+            </a>{' '}
+            .
+          </Typography>
+
+          <Typography component="p">
+            Este título é pós-fixado e o seu rendimento varia de acordo com a
+            soma da taxa de juros prefixada e a variação da{' '}
+            <a
+              href="https://www.bcb.gov.br/controleinflacao/oqueinflacao"
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
+              inflação
+            </a>{' '}
+            durante o período medida pelo Índice de Preços ao Consumidor Amplo
+            (IPCA).
+          </Typography>
+
+          <Typography component="h3">2. Previdência Privada</Typography>
+
+          <Typography component="p">
+            O sistema de previdência complementar é composto de{' '}
+            <strong>fundos de investimentos</strong> constituídos especialmente
+            para oferecer uma garantia adicional de renda ao trabalhador durante
+            a aposentadoria. Muitas vezes, a participação nesse tipo de
+            investimento é fechada para funcionários de empresas, nos conhecidos
+            fundos de pensão, mas existem opções abertas a qualquer interessado.
+          </Typography>
+
+          <Typography component="p">
+            Os pagamentos podem ser mensais ou de uma só vez e ainda pode fazer
+            contribuições adicionais sempre que tiver uma grana sobrando.
+            Lembre-se que quanto mais você investir e em maior tempo, mais seu
+            dinheiro cresce.
+          </Typography>
+
+          <Typography component="h3">3. Fundos de Investimento</Typography>
+
+          <Typography component="p">
+            Os fundos de investimento são produtos de investimento criados com o
+            único propósito de reunir o capital dos investidores e investi-lo
+            coletivamente por meio de uma carteira de instrumentos financeiros,
+            como ações, títulos e outras aplicações. Um fundo de investimento
+            oferece uma seleção mais ampla de oportunidades de investimento,
+            maior experiência em gestão e taxas de investimento mais baixas do
+            que os investidores poderiam obter por conta própria.
+          </Typography>
+        </Content>
       </MainContainer>
       <Footer />
     </>

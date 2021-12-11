@@ -30,7 +30,7 @@ export const Input = styled.input<InputProps>`
   font-size: 1.8rem;
 
   &:disabled {
-    color: #114b5f;
+    color: ${({ theme }) => theme.colors.textPrimary};
     font-weight: bold;
     font-size: 2rem;
     background: #f5f8fa;

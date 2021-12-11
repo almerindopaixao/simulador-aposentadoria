@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.footer`
   ${({ theme }) => css`
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.textPrimary};
     padding: ${theme.spacings.medium};
     height: 10rem;
 
@@ -23,7 +23,8 @@ export const Container = styled.footer`
 
     a {
       text-decoration: none;
-      color: ${({ theme }) => theme.colors.text};
+      color: ${({ theme }) => theme.colors.textPrimary};
+      font-weight: normal;
     }
   }
 `;
