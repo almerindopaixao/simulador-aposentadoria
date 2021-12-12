@@ -18,6 +18,7 @@ export default function NotFoundPage() {
         type="website"
         siteName={SiteConfig.SITE_NAME}
         url={SiteConfig.SITE_URL}
+        image_default={`${SiteConfig.SITE_URL}/banner.png`}
       />
       <Header />
       <MainContainer>
