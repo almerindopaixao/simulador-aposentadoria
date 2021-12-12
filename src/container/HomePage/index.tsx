@@ -332,6 +332,7 @@ export default function HomePage() {
         siteName={SiteConfig.SITE_NAME}
         url={SiteConfig.SITE_URL}
         keywords="Simulador, Aposentadoria, Finanças, Economizar, Dinheiro"
+        image_default={`${SiteConfig.SITE_URL}/banner.png`}
       />
       <Header>
         <div>
