@@ -68,6 +68,13 @@ export default class MyDocument extends Document {
             }}
           />
           {/* End Google Tag Manager */}
+          {/* Google Adsense */}
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7044213475500493"
+            crossOrigin="anonymous"
+          ></script>
+          {/* End Google Adsense */}
           <meta name="rating" content="general" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
